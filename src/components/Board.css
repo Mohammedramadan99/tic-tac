@@ -1,0 +1,60 @@
+.board {  
+  margin: auto;
+  /* background-color: rgb(18, 87, 77); */
+  /* border: 2px solid rgb(18, 87, 77); */
+  /* padding: 2px; */
+  border-radius: 7px;
+  animation: fadeIn 3s forwards;
+}
+.board.extended{
+  display: grid;
+  grid-template-columns: repeat(10,minmax(5px,50px));
+  grid-template-rows: repeat(10,minmax(5px,50px));
+}
+.board.normal{
+  /* width: 312px;
+  height: 312px;
+  display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(3,minmax(10px,100px));
+  grid-template-rows: repeat(3,minmax(10px,100px));
+}
+.cell {
+  box-sizing: border-box;
+  border-color: rgb(18, 87, 77);
+  border: 2px solid ;
+  /* border-right: 2px solid ; */
+  background-color: transparent;
+  transition: .2s ease-in;
+  color: rgb(18, 87, 77);
+  line-height: 90px;
+  flex-shrink: 0;
+  user-select: none;
+}
+.cell.extended{
+  width: 100%;
+  height: 100%;
+  font-size: clamp(10px,20px ,40px);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+}
+.cell.normal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(10px,50px ,80px);  
+  /* border-radius: 5px; */
+  margin: 2px;
+}
+
+.cell:hover {
+  background-color: rgb(90, 90, 23);
+  color: #011414;
+  border: 1px solid #011414;
+}
